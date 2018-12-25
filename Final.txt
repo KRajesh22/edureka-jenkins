@@ -1,0 +1,62 @@
+JAVA INSTALLATION:
+
+sudo apt-get update
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installerdo apt-get install default-jre
+sudo apt-get install default-jdk
+java -version
+sudo update-alternatives --config java
+sudo nano /etc/environment
+JAVA_HOME="/usr/bin/jvm/java-8-oracle"   or  /usr/lib/jvm/java-11-openjdk-amd64
+source /etc/environment
+java -version
+echo $JAVA_HOME
+sudo nano ~/.bashrc (In this bash file paste the below two lines)
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+source ~/.bashrc (Now the environment variables will be set)
+
+
+INSTALLING GIT
+
+sudo apt-get update
+sudo apt-get install git
+git --version
+https://bitbucket.org/iamankesh/game-of-life
+https://bitbucket.org/saikrishnajami/game-of-life/src/master/
+
+INSTALLING MAVEN
+
+Prerequisite:JAVA
+sudo su
+sudo apt-get update
+sudo apt-get install maven
+mvn -version
+sudo nano /etc/environment
+M2_HOME="/usr/share/maven"
+PATH="${M2_HOME}/bin:${PATH}"
+source /etc/environment
+echo $M2_HOME
+
+INSTALLING APACHETOMCAT(link used https://www.vultr.com/docs/install-tomcat-on-ubuntu-16-04)
+
+prerequistes:JAVA
+sudo su
+sudo apt-get update
+wget https://archive.apache.org/dist/tomcat/tomcat-8/.0.30/bin/tar file
+tar -xvzf filename
+cd tomcat
+cd bin
+./startup.sh
+./shutdown.sh
+
+
+JENKINS:
+wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+
+
+How to change default portno for tomact::::
+ 1st stop tomcat server and do the below things.
+got to tomact folder  -> conf folder.
+edit server.xml file  ->> change portno 8080 to 9090 something
