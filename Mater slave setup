@@ -1,0 +1,48 @@
+ sudo su
+    3  exit
+    4  ssh-keygen -t rsa -b 4096 -C "Jenkin"
+    5  ping 172.31.19.65
+    6  ifconfig
+    7  sudo nano /etc/ssh/sshd_config
+    8  sudo sshd -t
+    9  sudo service ssh restart
+   10  sudo passwd ubuntu
+   11  ssh ubuntu@172.31.19.65
+   12  ssh-copy-id ubuntu@ip-172-31-19-65
+   13  sudo nano /etc/ssh/sshd_config
+   14  sudo sshd -t
+   15  sshd -t
+   16  sudo sshd -t
+   17  sudo service ssh restart
+   18  sudo apt-get install -y ansible
+   19  cd /etc/ansible/
+   20  sudo nano hosts
+   21  ansible -m ping all
+   22  ansible -m ping node
+   23  ansible -m shell -a "ifconfig"
+   24  ansible -m shell -a "ifconfig" node
+   25  ansible -m shell -a "pwd" node
+   26  ansible -m shell -a "ls -l" node
+   27  ls
+   28  cd
+   29  ls
+   30  pwd
+   31  touch testfile
+   32  scp testfile ubuntu@172.31.19.65:/home/ubuntu
+   33  dpkg -l
+   34  dpkg -l | grep "openssh"
+   35  sudo apt-get install -y opensshserver
+   36  sudo apt-get install -y openssh-server
+   37  ls
+   38  ansible -m shell -a "scp testfile ubuntu@172.31.19.65:/home/ubuntu" node
+   39  ansible -m shell -a "ifconfig" node
+   40  ansible -m ping node
+   41  ansible -m shell -a "cat /etc/cpuinfo" node
+   42  ansible -m shell -a "df -kh" node
+   43  cd /var/lib/
+   44  cd jenkins/
+   45  ls
+   46  cd secrets/
+   47  ls
+   48  sudo su
+   49  cat /.ssh/id_rsa
