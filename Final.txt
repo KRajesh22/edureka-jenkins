@@ -53,7 +53,24 @@ cd bin
 
 
 JENKINS:
-wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+Add the Jenkins Debian repository.
+
+Import the GPG keys of the Jenkins repository using the following wget command:
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+Copy
+The command above should output OK which means that the key has been successfully imported and packages from this repository will be considered trusted.
+
+Next, add the Jenkins repository to the system with:
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+Copy
+Install Jenkins.
+
+Once the Jenkins repository is enabled, update the apt package list and install the latest version of Jenkins by typing:
+
+sudo apt update
+sudo apt install jenkins
 
 
 How to change default portno for tomact::::
