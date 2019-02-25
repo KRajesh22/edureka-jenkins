@@ -72,6 +72,9 @@ Once the Jenkins repository is enabled, update the apt package list and install 
 sudo apt update
 sudo apt install jenkins
 
+Adding new user
+useradd -m -s /bin/bash Jenkins
+
 
 How to change default portno for tomact::::
  1st stop tomcat server and do the below things.
